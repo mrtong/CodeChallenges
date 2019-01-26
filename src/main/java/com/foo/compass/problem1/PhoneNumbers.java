@@ -3,7 +3,7 @@ package com.foo.compass.problem1;
 import com.foo.compass.problem1.exceptions.EmptyInputPhoneNumberException;
 import com.foo.compass.problem1.exceptions.InvalidInputPhoneNumberException;
 import com.foo.compass.problem1.exceptions.InvalidLengthOfInputPhoneNumberException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -15,6 +15,7 @@ import java.util.Map;
 import static java.lang.Integer.parseInt;
 import static java.nio.charset.Charset.defaultCharset;
 import static java.nio.file.Files.readAllLines;
+import static org.slf4j.LoggerFactory.getLogger;
 
 /**
  * Created by Luke Tong on 24-Mar-16.
@@ -39,8 +40,7 @@ public class PhoneNumbers {
     }
 
     ;
-
-    final static Logger logger = Logger.getLogger(PhoneNumbers.class);
+    private static final Logger logger = getLogger(PhoneNumbers.class);
 
     private List<String> generateCombos(String phoneNumber) throws InvalidInputPhoneNumberException {
 
