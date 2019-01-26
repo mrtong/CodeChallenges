@@ -5,16 +5,17 @@ import java.math.BigInteger;
 public class Solution {
     public static void main(String[] args) {
         Solution s = new Solution();
-        s.printResult(5, 2);
-        s.printResult(100, 10);
-//        s.printResult(1000000, 200);
-//        s.printResult(10000000, 200);
+        s.printOutResult(5, 2);
+        s.printOutResult(100, 10);
+        s.printOutResult(1000000, 200);
+        s.printOutResult(10000000, 200);
     }
 
-    public String printResult(int n, int C) {
+
+    public String printOutResult(int n, int C) {
         String output = doJob(n, C).toString();
-        System.out.printf("\nfor n=%d & C=%d \n result=%s", n, C,
-                output.toString().substring(0, Math.min(10, output.length())));
+        System.out.printf("for n=%d & C=%d\nThe result is =%s\n\n", n, C,
+                output.substring(0, Math.min(10, output.length())));
         return output;
     }
 
