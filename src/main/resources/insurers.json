@@ -1,0 +1,22 @@
+{
+    "insurers":[
+        {
+            "name":"insurer1"
+        },
+        {
+            "name":"insurer2",
+            "excludedPostCodes":"2000,2001",
+            "excludedOccupation":"Butcher"
+        },
+        {
+            "name":"insurer3",
+            "excludedPostCodes":"2000",
+            "excludedOccupation":"Butcher,Plumber",
+            "minimumTurnOver":200000
+        },
+        {
+            "name":"insurer4",
+            "minimumTurnOver":400000
+        }
+    ]
+}
